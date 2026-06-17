@@ -21,6 +21,11 @@
       <stop offset="100%" stop-color="#55e7fc"/>
     </linearGradient>
 
+    <!-- Clip Path for circular avatar image -->
+    <clipPath id="avatar-image-clip">
+      <circle cx="0" cy="0" r="45"/>
+    </clipPath>
+
     <!-- Style definition -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;display=swap');
@@ -70,10 +75,8 @@
     <circle cx="0" cy="0" r="56" stroke="#30363d" stroke-width="1" fill="none" opacity="0.5"/>
     <circle cx="0" cy="0" r="62" stroke="#30363d" stroke-width="1" fill="none" opacity="0.3"/>
 
-    <!-- Text inside Avatar -->
-    <text x="0" y="7" fill="#58a6ff" font-size="20" font-weight="bold" text-anchor="middle" class="font-mono">
-      satyam
-    </text>
+    <!-- Avatar Image (GitHub Profile Photo) -->
+    <image href="https://github.com/Satyam123Patel.png" x="-45" y="-45" width="90" height="90" clip-path="url(#avatar-image-clip)"/>
   </g>
 
   <!-- Stats List -->
