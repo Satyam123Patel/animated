@@ -1,0 +1,7 @@
+# Satyam Patel
+
+Welcome to my profile! Below is my custom animated profile card.
+
+<p align="center">
+  <img src="profile_card.svg" width="400" alt="Satyam's Animated Profile Card" />
+</p>
