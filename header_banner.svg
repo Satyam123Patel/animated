@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="260" viewBox="0 0 850 260">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a13"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- Glowing Blue Filter -->
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Glowing Green Filter -->
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Ambient Floating Particles -->
+    <radialGradient id="particle-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="particle-glow-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0066ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Font Style Sheet -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;family=Fira+Code:wght@400;500&amp;display=swap');
+      .title-text {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+      }
+      .subtitle-text {
+        font-family: 'Fira Code', monospace;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+      
+      /* Neon Pulsing for Title */
+      @keyframes pulse-cyan {
+        0% { fill: #00ffcc; filter: url(#glow-blue); }
+        50% { fill: #00bfff; filter: none; }
+        100% { fill: #00ffcc; filter: url(#glow-blue); }
+      }
+      .pulse-neon {
+        animation: pulse-cyan 6s infinite ease-in-out;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Rect -->
+  <rect width="850" height="260" rx="16" fill="url(#bg-grad)" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Cyber Grid Lines / Tech Circuit Board (Background Decoration) -->
+  <g stroke="#1e293b" stroke-width="1.5" fill="none" opacity="0.6">
+    <!-- Horizontal lines -->
+    <path d="M 50 40 L 800 40"/>
+    <path d="M 50 220 L 800 220"/>
+    
+    <!-- Connected Circuit paths -->
+    <path id="circuit-path-1" d="M 450 130 L 600 130 L 650 80 L 780 80"/>
+    <path id="circuit-path-2" d="M 520 170 L 640 170 L 690 120 L 780 120"/>
+    <path id="circuit-path-3" d="M 400 90 L 520 90 L 570 140 L 780 140"/>
+  </g>
+
+  <!-- Glowing Signal Packets traveling along the circuits -->
+  <!-- Packet 1 -->
+  <circle r="4" fill="#00ffcc" filter="url(#glow-blue)">
+    <animateMotion dur="4.5s" repeatCount="indefinite" path="M 450 130 L 600 130 L 650 80 L 780 80" />
+  </circle>
+
+  <!-- Packet 2 -->
+  <circle r="3.5" fill="#3b82f6" filter="url(#glow-blue)">
+    <animateMotion dur="6s" begin="1s" repeatCount="indefinite" path="M 520 170 L 640 170 L 690 120 L 780 120" />
+  </circle>
+
+  <!-- Packet 3 -->
+  <circle r="4" fill="#10b981" filter="url(#glow-green)">
+    <animateMotion dur="5s" begin="2s" repeatCount="indefinite" path="M 400 90 L 520 90 L 570 140 L 780 140" />
+  </circle>
+
+  <!-- Ambient Floating Dust Particles -->
+  <!-- Particle 1 -->
+  <circle cx="200" cy="80" r="40" fill="url(#particle-glow)" opacity="0.3">
+    <animate attributeName="cy" values="80;120;80" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="200;230;200" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Particle 2 -->
+  <circle cx="600" cy="180" r="50" fill="url(#particle-glow-blue)" opacity="0.2">
+    <animate attributeName="cy" values="180;140;180" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="600;570;600" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Text / Brand Container -->
+  <g transform="translate(60, 0)">
+    <!-- Tech Corner Accents -->
+    <path d="M -20 50 L -20 30 L 0 30" stroke="#00ffcc" stroke-width="2" fill="none"/>
+    <path d="M -20 190 L -20 210 L 0 210" stroke="#00ffcc" stroke-width="2" fill="none"/>
+    
+    <!-- Title: SATYAM PATEL -->
+    <text x="0" y="115" fill="#00ffcc" font-size="38" class="title-text pulse-neon">
+      Satyam Patel
+    </text>
+    
+    <!-- Dynamic Line under title -->
+    <rect x="0" y="135" width="280" height="2" fill="#1e293b"/>
+    <rect x="0" y="135" width="80" height="2" fill="#00ffcc">
+      <animate attributeName="x" values="0;200;0" dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Subtitle: FULL-STACK DEVELOPER -->
+    <text x="0" y="168" fill="#94a3b8" font-size="14" class="subtitle-text">
+      &gt; Full-Stack Developer
+    </text>
+    <text x="0" y="192" fill="#64748b" font-size="12" class="subtitle-text">
+      &gt; Crafting interactive digital systems
+    </text>
+  </g>
+
+  <!-- Interactive Terminal Prompt Cursor at bottom right -->
+  <g transform="translate(740, 225)" font-family="monospace" font-size="11" fill="#475569">
+    <text x="0" y="0">SYS: ACTIVE</text>
+    <circle cx="78" cy="-3" r="3" fill="#10b981">
+      <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

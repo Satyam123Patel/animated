@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="header_banner.svg?v=1" width="100%" alt="Satyam's Animated Header Banner" />
+</p>
+
 # Satyam Patel
 
 Welcome to my profile! Below is my custom animated profile card.
