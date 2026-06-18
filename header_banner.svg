@@ -36,9 +36,6 @@
   <!-- Background Rect -->
   <rect width="850" height="260" rx="16" fill="url(#bg-grad)" stroke="#1f2937" stroke-width="1"/>
 
-  <!-- Static Tech Grid Line (Very subtle) -->
-  <line x1="50" y1="220" x2="800" y2="220" stroke="#1e293b" stroke-width="1.5"/>
-
   <!-- Text / Brand Container -->
   <g transform="translate(60, 0)">
     <!-- Tech Corner Accents -->
