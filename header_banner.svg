@@ -128,14 +128,14 @@
       &gt; Full-Stack Developer
     </text>
     <text x="0" y="192" fill="#64748b" font-size="12" class="subtitle-text">
-      &gt; Crafting interactive digital systems
+      &gt; Java | Spring Boot | React | Microservices
     </text>
   </g>
 
   <!-- Interactive Terminal Prompt Cursor at bottom right -->
-  <g transform="translate(740, 225)" font-family="monospace" font-size="11" fill="#475569">
-    <text x="0" y="0">SYS: ACTIVE</text>
-    <circle cx="78" cy="-3" r="3" fill="#10b981">
+  <g transform="translate(555, 225)" font-family="monospace" font-size="11" fill="#475569">
+    <text x="0" y="0">DB &amp; TOOLS: MySQL | MongoDB | Git | Maven</text>
+    <circle cx="258" cy="-3" r="3" fill="#10b981">
       <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/>
     </circle>
   </g>
