@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="header_banner.svg?v=3" width="100%" alt="Satyam's Animated Header Banner" />
+  <img src="header_banner.svg?v=4" width="100%" alt="Satyam's Animated Header Banner" />
 </p>
 
 # Satyam Patel
